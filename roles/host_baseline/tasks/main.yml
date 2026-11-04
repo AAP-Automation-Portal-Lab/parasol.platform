@@ -1,5 +1,5 @@
 ---
-- name: Render Northwind MOTD
+- name: Render Parasol MOTD
   ansible.builtin.copy:
     dest: /etc/motd
     owner: root
@@ -7,20 +7,20 @@
     mode: "0644"
     content: |
       ============================================================
-       {{ northwind_motd_company }}
-       Environment : {{ northwind_motd_environment }}
+       {{ parasol_motd_company }}
+       Environment : {{ parasol_motd_environment }}
        Host        : {{ inventory_hostname }}
-       Contact     : {{ northwind_motd_contact }}
+       Contact     : {{ parasol_motd_contact }}
        Unauthorized access is prohibited.
       ============================================================
 
 - name: Ensure baseline packages are present
   ansible.builtin.package:
-    name: "{{ northwind_baseline_packages }}"
+    name: "{{ parasol_baseline_packages }}"
     state: present
   when: ansible_os_family == "RedHat"
 
 - name: Set system timezone
   community.general.timezone:
-    name: "{{ northwind_timezone }}"
-  when: northwind_timezone | length > 0
+    name: "{{ parasol_timezone }}"
+  when: parasol_timezone | length > 0
