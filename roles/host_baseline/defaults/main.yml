@@ -1,9 +1,9 @@
 ---
-northwind_motd_company: Northwind Corporation
-northwind_motd_environment: lab
-northwind_motd_contact: platform-automation@northwind.example
-northwind_timezone: UTC
-northwind_baseline_packages:
+parasol_motd_company: Parasol Corporation
+parasol_motd_environment: lab
+parasol_motd_contact: platform-automation@parasol.example
+parasol_timezone: UTC
+parasol_baseline_packages:
   - chrony
   - rsync
   - vim-enhanced
