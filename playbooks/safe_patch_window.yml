@@ -1,11 +1,11 @@
 ---
 # Wrapper used by Controller JTs that must respect CAB windows
-- name: Northwind change-window gated maintenance
+- name: Parasol change-window gated maintenance
   hosts: all
   become: true
   gather_facts: false
   roles:
-    - role: northwind.platform.change_window
+    - role: parasol.platform.change_window
   tasks:
     - name: Placeholder for patch / restart tasks
       ansible.builtin.debug:
