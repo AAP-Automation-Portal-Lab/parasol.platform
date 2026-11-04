@@ -32,4 +32,4 @@ before disruptive automation runs.
 
 ## Support
 
-Platform Automation — `#nw-platform-automation` · platform-automation@parasol.example
+Platform Automation — `#parasol-platform-automation` · platform-automation@parasol.example
