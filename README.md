@@ -1,6 +1,6 @@
-# northwind.platform
+# parasol.platform
 
-Internal Ansible collection owned by **Northwind Platform Engineering**.
+Internal Ansible collection owned by **Parasol Platform Engineering**.
 
 Used across Controller job templates and the Self-Service Automation Portal to
 apply a consistent Linux host baseline and to enforce change-window policy
@@ -10,8 +10,8 @@ before disruptive automation runs.
 
 | Role | Purpose |
 |------|---------|
-| `northwind.platform.host_baseline` | MOTD, timezone, chrony presence, admin SSH banner |
-| `northwind.platform.change_window` | Fail the play when outside approved maintenance windows |
+| `parasol.platform.host_baseline` | MOTD, timezone, chrony presence, admin SSH banner |
+| `parasol.platform.change_window` | Fail the play when outside approved maintenance windows |
 
 ## Example
 
@@ -19,17 +19,17 @@ before disruptive automation runs.
 - hosts: rhel
   become: true
   roles:
-    - role: northwind.platform.change_window
+    - role: parasol.platform.change_window
       vars:
-        northwind_change_window_tz: America/New_York
-        northwind_change_window_days: [6, 0]   # Sat/Sun
-        northwind_change_window_start_hour: 2
-        northwind_change_window_end_hour: 6
-    - role: northwind.platform.host_baseline
+        parasol_change_window_tz: America/New_York
+        parasol_change_window_days: [6, 0]   # Sat/Sun
+        parasol_change_window_start_hour: 2
+        parasol_change_window_end_hour: 6
+    - role: parasol.platform.host_baseline
       vars:
-        northwind_motd_environment: production
+        parasol_motd_environment: production
 ```
 
 ## Support
 
-Platform Automation — `#nw-platform-automation` · platform-automation@northwind.example
+Platform Automation — `#nw-platform-automation` · platform-automation@parasol.example
