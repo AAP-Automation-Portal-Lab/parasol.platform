@@ -1,19 +1,19 @@
-namespace: northwind
+namespace: parasol
 name: platform
 version: 1.2.0
 readme: README.md
 authors:
-  - Northwind Platform Engineering <platform-automation@northwind.example>
+  - Parasol Platform Engineering <platform-automation@parasol.example>
 description: >
-  Shared platform automation for Northwind Corporation — host baseline,
+  Shared platform automation for Parasol Corporation — host baseline,
   change-window guards, and standard operating playbooks used by Controller
   and the Self-Service Automation Portal.
 license_file: LICENSE
-tags: [northwind, platform, infrastructure, linux]
+tags: [parasol, platform, infrastructure, linux]
 dependencies:
   ansible.posix: '>=1.5.0'
   community.general: '>=8.0.0'
-repository: https://github.com/AAP-Automation-Portal-Lab/aap_lab.platform
-documentation: https://github.com/AAP-Automation-Portal-Lab/aap_lab.platform/blob/main/README.md
-homepage: https://northwind.example
-issues: https://github.com/AAP-Automation-Portal-Lab/aap_lab.platform/issues
+repository: https://github.com/AAP-Automation-Portal-Lab/parasol.platform
+documentation: https://github.com/AAP-Automation-Portal-Lab/parasol.platform/blob/main/README.md
+homepage: https://parasol.example
+issues: https://github.com/AAP-Automation-Portal-Lab/parasol.platform/issues
